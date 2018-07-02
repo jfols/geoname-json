@@ -16,6 +16,6 @@ awk -F '\t' '{ \
   "\", adminCode3: \"" $9 \
   "\", location: [ " $10 ", " $11 " ]"  \
   ", accuracy: " $12 \
-  "\" }" \
+  " }" \
 }' > zips.json
 rm US.txt
