@@ -1,5 +1,5 @@
 #!/bin/bash
-wget http://download.geonames.org/export/zip/US.zip && unzip ./US.zip && rm ./US.zip ./readme.txt 
+wget http://download.geonames.org/export/zip/US.zip && unzip ./US.zip && rm ./US.zip ./readme.txt
 cat US.txt | \
 awk -F '\t' '{ \
   for (i = 1; i <= NF; i++) {
@@ -15,7 +15,7 @@ awk -F '\t' '{ \
   "\", adminName3: \"" $8 \
   "\", adminCode3: \"" $9 \
   "\", location: [ " $10 ", " $11 " ]"  \
-  "\", accuracy: " $12 \
+  ", accuracy: " $12 \
   "\" }" \
 }' > zips.json
 rm US.txt
