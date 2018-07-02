@@ -14,8 +14,8 @@ awk -F '\t' '{ \
   "\", \"adminCode2\": \"" $7 \
   "\", \"adminName3\": \"" $8 \
   "\", \"adminCode3\": \"" $9 \
-  "\", \"location\": [ " $10 ", " $11 " ]"  \
-  ", \"accuracy\": " $12 \
+  "\", \"location\": [ " (1 * $10) ", " (1 * $11) " ]"  \
+  ", \"accuracy\": " (1 * $12) \
   " }" \
 }' > zips.json
 rm US.txt
